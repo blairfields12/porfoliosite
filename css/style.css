@@ -60,11 +60,11 @@ header img{
     }
   }
   
-
+/* 
   header img{
     -webkit-transform: scaleY(1.1);
     transform: scaleY(1.1);
-    z-index: -99;}
+    z-index: -99;} */
 
 .navigationBar { 
     display: flex; 
@@ -98,7 +98,6 @@ header img{
 	position:relative;
 	top:1px;
 } 
-
 
       
 a.skip{
@@ -161,6 +160,8 @@ body{
     padding-left: 0px;
     padding-right: 0px;
     border: 0px;
+    margin: 0px;
+
 }
 
 h1 { 
@@ -184,6 +185,7 @@ h2 {
 p { 
     font-size: 1.2em;
     color: #696969;
+    line-height: 35px;
     /* text-align: center; */
     /* padding-left: 20px; */
 }
@@ -191,11 +193,13 @@ p {
 h3 { 
     font-size: 1.2em; 
     color: #696969;
+    line-height: 35px;
 }
 
 h4 {
     font-size: 1.2em;
     color: #696969;
+    line-height: 25px;
 }
 
 h4 ul li{ 
@@ -206,7 +210,7 @@ h4 ul li{
 
 h4 ul li a:hover{
     /* text-decoration: underline dotted navy 4px; */
-    border: 2px solid 000080;
+    border: 2px solid #000080;
 }
 
 
@@ -220,7 +224,7 @@ h4 ul li a{
     margin-left: 30px;
  } 
 
- mybutton { 
+ .mybutton { 
      color: #191970;
  }
 
@@ -231,6 +235,12 @@ h4 ul li a:visited{
 h1, h2, p, h4, h3 { 
     padding: 20px;
 }
+
+/* .welcome { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+} */
 
 .photos #mommyandme {
     transform: rotate(-90deg);
@@ -245,12 +255,19 @@ footer {
   }
 
 footer p{ 
-    /* text-align: center;
-    position: absolute;
-    margin:0;
-    padding:0;
-    width: 100%; */
     color: #696969;
+}
+
+.linkedin { 
+        text-decoration: none;
+    }
+
+.michmail { 
+    text-decoration: none;
+}
+
+.github { 
+    text-decoration: none;
 }
 
 /* Main/Portfolio Intro Page */
@@ -332,31 +349,9 @@ footer p a img{
   }
 
   .resume { 
-      display: none;
+      display: none !important;
   }
 
-  
-
-    /* .relevantclasses li{ 
-        list-style-type: square;
-    } */
-
-      /* display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-column-gap: 1em;
-      grid-row-gap: 1em;   
-      list-style-type: square;      margin-left: 10px;  */
-      /* display: flex;
-      flex-direction: column; */
-      /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center;
-    align-items: space-between; */
-    /* align-items: space-between;
-    min-width: 250px;
-    min-height: 250px; 
-    list-style-type: square */
 
     .relevantclasses li{ 
         font-weight: lighter;
@@ -371,7 +366,24 @@ footer p a img{
     }
 
     .relevantclasses{
-        /* text-align: center; */
+        list-style-type: square;
+        margin-left: 60px;
+        align-items: center;
+    }
+
+    .moreclasses li{ 
+        font-weight: lighter;
+        font-size: 1em;
+        /* try to figur out how to make class names stay put but if you click it lets you see description or scroll or soemthing --
+        -- if i can do that, make font-weight:bold, but if not, keep light */
+        color: #696969;
+        justify-self: center;
+        justify-content: center;
+        list-style-type: square;
+        margin-bottom: 15px;
+    }
+
+    .moreclasses{
         list-style-type: square;
         margin-left: 60px;
         align-items: center;
@@ -388,9 +400,9 @@ footer p a img{
     margin-left: auto;
     margin-right: auto;
     align-content: center;
-    /* place-items: center; */
-    /* width: 100%;   
-    height: 100%; */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 75px;
 }
   
     #h2 { 
@@ -404,8 +416,6 @@ footer p a img{
         justify-content: center;
         overflow: scroll;
         font-family: 'Encode Sans', sans-serif;
-        /* font-family: Brush Script MT, 'Times New Roman', Times, serif; */
-        /* text-align: center; */
 
         }
 
@@ -434,7 +444,6 @@ footer p a img{
     .yummyfood img { 
         /* height: 100%; */
         height: auto;
-        object-fit: cover;
     }
 
     .travelwithfriends { 
@@ -578,10 +587,6 @@ footer p a img{
     }
 
     /* contact page */
-    h3 {
-        text-align: center;
-    }
-
     /* Add styles to 'container' class */
     .container {
         padding: 10px ;
@@ -615,34 +620,21 @@ footer p a img{
 
     /* Add styles to show 'focus' of selector */
     input[type=text]:focus,input[type=email] input[type=phone]:focus, textarea:focus {
-        border: 4px solid #010265 dashed;
+        border: 4px solid #010265 ;
     }
 
     /* Add styles to the submit button */
     input[type=submit] {
-        /* background: #64B5F6;
-        text-transform: uppercase;
-        margin: 0 auto;
-        outline: 0;
-        color: white;
-        border: 0;
-        padding: 12px 24px;
-        border-radius: 4px;
-        transition: all ease-in-out 0.1s;
-        position: relative;
-        display: inline-block;
-        text-align: center; */
         box-shadow:inset 0px 1px 33px -19px #ffffff;
         background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-        /* background-color:#483d8b; */
-        border-radius:25px;
         border:2px solid #483d8b;
         display:inline-block;
+        border-radius:18px;
         cursor:pointer;
         color:#666666;
         font-family: 'Encode Sans', sans-serif;
         font-size:1.1em;
-        text-transform: lowercase;
+        text-transform: uppercase;
         font-weight:bold;
         padding:5px 22px;
         text-decoration:none;
@@ -658,7 +650,10 @@ footer p a img{
 
     /* Style 'hover' property */
     input[type=submit]:hover {
-        background: #2196F3;
+        /* background: #2196F3; */
+        background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+        background-color:#e9e9e9;
+        border-radius: 0px;
     }
 
     /* Align items to center of the 'div' with the class 'center' */
@@ -693,9 +688,19 @@ footer p a img{
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+  /* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
+  .flip-card:focus .flip-card {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:active .flip-card {
+    transform: rotateY(180deg);
+  } */
+
+  
+
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -706,17 +711,13 @@ footer p a img{
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    /* background-color: #bbb; */
-    background-color: #010265;
-    color: #fff;
+    background-color: #b8c6db;
   }
   .flip-card-front h1 { 
       text-align: center;
-      color: #fff;
+      color: #010265;
       padding-top: 150px;
-      /* padding-bottom: ; */
 
   }
   
@@ -737,241 +738,269 @@ footer p a img{
     line-height: 0px;
   }
 
-.flip-card:hover .flip-card,
+/* .flip-card:hover .flip-card-inner,
 .flip-card:focus-within .flip-card,
 .flip-card:active .flip-card,
 .flip-card:focus .flip-card {
   transform: rotateY(180deg);
-}
+} */
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus-within .flip-card-inner,
+    .flip-card:active .flip-card-inner,
+    .flip-card:focus .flip-card-inner 
 
-
+    a.flip-card:focus .flip-card-inner {
+        transform:rotateY(180deg);   
+        }       
     /* TABLET VIEW */
     /* TABLET VIEW */
   
-  @media screen and (min-width:600px) { 
+  @media screen and (min-width:768px) { 
     body header {
-        display: flex;
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
     }
+    /* .headshot img { 
+        position:absolute;
+        margin-right: 200px;
+    }
+    
 
-    .navigationBar { 
-        display: flex; 
-        flex-direction: row;
+    .aboutme { 
+        margin-right: 300px;
+    } */
+
+    .mainpagegrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto ;
+        /* grid-template-rows: 100px auto; */
+        /* align-content: center; */
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        padding-right: 20px;
+    }
+
+    .headshot{ 
+        grid-column: 2 / -1;
+        grid-row: 1 / 1;
+        /* padding-bottom: 500px; */
+        margin-top: -100px;
+    }
+
+    .infoaboutme { 
+        display: flex;
+        /* flex-wrap: nowrap; */
+        flex-direction: column;
+        /* align-content: stretch; */
+        grid-column: 1 / 2;
+        grid-row: 1/1;
+        height: 100%;
+    }
+
+    .summary p { 
+        padding-top: 0px;
+    }
+
+    .evenmoreinfo h3 { 
+        padding-bottom: 0px;
     }
 
     .navigationBar { 
-        display: flex; 
         flex-direction: column;
     }
 
     .grid{
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 1fr 1fr 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-row-gap: 1em; 
+        /* grid-column-gap: 1em;
+        grid-row-gap: 1em;  */
     }
 
-  #h2 {  
-    /* color: #0000cd; */
-    /* color: #696969; */
-    margin-left: 20px;
-    font-size: 1.5em;
-    color: #696969;;
-    /* padding-top: 10px; */
-    padding-bottom: 10px;
-    /* margin: auto; */
-    grid-column: 1 / span 3;
-    grid-row: 1 / 1;
-    justify-content: center;
-    font-family: 'Encode Sans', sans-serif;
-    text-align: center;
-    }
-
-    .flowers { 
-        grid-row: 2 / 2;
-        grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .flowers img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .yummyfood { 
-        grid-row: 2 / 2;
-        grid-column: 2 / 3;
-        border: 5px #010265 solid;
-    }
-
-    .yummyfood img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .travelwithfriends { 
-        grid-row: 2 / 2;
-        grid-column: 3 / 3;
-        border: 5px #010265 solid;
-    }
-
-    .travelwithfriends img{ 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .travel { 
-        grid-row: 3 / 3;
-        grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .travel img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .baking { 
-        grid-row: 3 / 3;
-        grid-column: 3 / 3;
-        border: 5px #010265 solid;
-    }
-
-    .baking img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .museums { 
-        grid-row: 3 / 3;
-        grid-column: 2 / 2;
-        border: 5px #010265 solid;
-    }
-
-    .museums img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .siteseeing { 
-        grid-row: 4 / 4;
-        grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .siteseeing img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;}
-
-    .gameday { 
-        grid-row: 4 / 4;
-        grid-column: 2 / 2;
-        border: 5px #010265 solid;
-    }
-
-    .gameday img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .skiing { 
-        grid-row: 4 / 4;
-        grid-column: 3 / 3;
-        border: 5px #010265 solid;
-    }
-
-    .skiing img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .film { 
-        grid-row: 5 / 5;
-        grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .film img{
-        height: auto;
-        object-fit: cover;
-    }
-
-    .flowerhouse { 
-        grid-row: 5 / 5;
-        grid-column: 2 / 2;
-        border: 5px #010265 solid;
-    }
-
-    .flowerhouse img{ 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
-
-    .vangough { 
-        grid-row: 5 / 5;
-        grid-column: 3 / 3;
-        border: 5px #010265 solid;
-    }
-    
-    .vangough img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
- 
-    footer { 
+    #h2 {  
+        /* color: #0000cd; */
+        /* color: #696969; */
+        margin-left: 20px;
+        font-size: 1.5em;
+        color: #696969;;
+        /* padding-top: 10px; */
+        padding-bottom: 10px;
+        /* margin: auto; */
         grid-column: 1 / span 3;
+        grid-row: 1 / 1;
+        justify-content: center;
+        font-family: 'Encode Sans', sans-serif;
+        text-align: center;
+        }
+
+        .flowers { 
+            grid-row: 2 / 2;
+            grid-column: 1 / 1;
+        }
+
+        .flowers img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .yummyfood { 
+            grid-row: 2 / 2;
+            grid-column: 2 / 3;
+        }
+
+        .yummyfood img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .travelwithfriends { 
+            grid-row: 2 / 2;
+            grid-column: 3 / 3;
+        }
+
+        .travelwithfriends img{ 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .travel { 
+            grid-row: 3 / 3;
+            grid-column: 1 / 1;
+        }
+
+        .travel img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .baking { 
+            grid-row: 3 / 3;
+            grid-column: 3 / 3;
+        }
+
+        .baking img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .museums { 
+            grid-row: 3 / 3;
+            grid-column: 2 / 2;
+        }
+
+        .museums img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .siteseeing { 
+            grid-row: 4 / 4;
+            grid-column: 1 / 1;
+        }
+
+        .siteseeing img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .gameday { 
+            grid-row: 4 / 4;
+            grid-column: 2 / 2;
+        }
+
+        .gameday img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .skiing { 
+            grid-row: 4 / 4;
+            grid-column: 3 / 3;
+        }
+
+        .skiing img { 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .film { 
+            grid-row: 5 / 5;
+            grid-column: 1 / 1;
+        }
+
+        .film img{
+            height: 100%;
+        }
+
+        .flowerhouse { 
+            grid-row: 5 / 5;
+            grid-column: 2 / 2;
+        }
+
+        .flowerhouse img{ 
+            height: 100%;
+            /* height: auto; */
+        }
+
+        .vangough { 
+            grid-row: 5 / 5;
+            grid-column: 3 / 3;
+        }
+        
+        .vangough img { 
+            height: 100%;
+            /* height: auto; */
+        }
+    
+        footer { 
+            grid-column: 1 / span 3;
+        }
+
+        /* Academics page */
+
+        .transcript { 
+            display: block !important;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .resume { 
+            display: block !important;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .classes { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+    /* .relevantclasses { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    /* Academics page */
-
-    .transcript { 
-        display: block !important;
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-  
-    .resume { 
-        display: block !important;
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .moreclasses { 
+        flex-direction: column;
+        flex-wrap: wrap;
+    } */
 
 
     /* Main/Portfolio Intro Page */
-    /* main { 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-row-gap: 1em; 
-
-        /* flex-direction: column;
-        justify-content: center; */
-        /* align-items: flex-end; */
 
         h2 { 
             grid-column: 1 / span 2;
         }
-        .headshot { 
+        /* .headshot { 
             grid-column: 1 / 1;
             grid-row: 2 / 2;
-        } 
+        }  */
 
         .photos{
             display: flex;
@@ -982,7 +1011,7 @@ footer p a img{
             min-width: 250px;
             min-height: 250px; 
         }
-    }
+    
     /* turn off animation */
     @media (prefers-reduced-motion:reduce){
         .navigationBar{
@@ -997,16 +1026,18 @@ footer p a img{
             background-position: initial; */
         }
 
-        .flip-card:hover .flip-card,
-        .flip-card:focus-within .flip-card,
+        .flip-card:hover .flip-card-inner,
+        .flip-card:focus-within .flip-card-inner,
         .flip-card:active .flip-card,
         .flip-card:focus .flip-card {
             transform:rotateY(0deg);   
             transform: none;     
         }       
-
-    
-      }
+        .flip-card .flip-card-inner {
+            transform: rotateY(0deg);
+          }
+        }
+      
     
 
     /* p { 
@@ -1041,195 +1072,122 @@ footer p a img{
 
 /* DESKTOP VIEW */
 /* DESKTOP VIEW */
-@media screen and (min-width:800px) { 
+@media screen and (min-width:962px) { 
     header{ 
         width: 100%;
     }
     body { 
-        width: 100%
-    }
+        width: 100%;
+        }
 
     body header {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         /* justify-content: center; */
     }
 
     .navigationBar { 
-        display: flex; 
         flex-direction: row;
     }
 
-    /* .navigationBar { 
-        display: flex; 
-        flex-direction: column;
+    /* .explanation { 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 100px;
     } */
 
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px 1fr 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-row-gap: 1em; 
+    .classes { 
+        justify-content: center;
     }
 
-  #h2 {  
-    margin-left: 20px;
-    font-size: 1.5em;
-    color: #696969;;
-    padding-bottom: 10px;
-    grid-column: 1 / span 3;
-    grid-row: 1 / 1;
-    justify-content: center;
-    font-family: 'Encode Sans', sans-serif;
-    text-align: center;
+    .explanation {
+        height: 10em;
+        position: relative }
+
+    .explanation p {
+        margin: 0;
+        /* background: yellow; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) }
+
+
+    .grid{
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr;
     }
+
 
     .flowers { 
         grid-row: 2 / 2;
         grid-column: 1 / 1;
-        border: 5px #010265 solid;
+        /* border: 5px #010265 solid; */
     }
 
-    .flowers img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
 
     .yummyfood { 
         grid-row: 2 / 2;
         grid-column: 2 / 2;
-        border: 5px #010265 solid;
     }
 
-    .yummyfood img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
 
     .travelwithfriends { 
         grid-row: 2 / 2;
         grid-column: 3 / 3;
-        border: 5px #010265 solid;
     }
 
-    .travelwithfriends img{ 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
 
     .travel { 
         grid-row: 2/ 2;
         grid-column: 4 / 4;
-        border: 5px #010265 solid;
     }
 
-    .travel img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
-    }
 
     .baking { 
         grid-row: 3 / 3;
         grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .baking img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
 
     .museums { 
         grid-row: 3 / 3;
         grid-column: 2 / 2;
-        border: 5px #010265 solid;
-    }
-
-    .museums img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
 
     .siteseeing { 
         grid-row: 3/ 3;
         grid-column: 3 / 3;
-        border: 5px #010265 solid;
     }
-
-    .siteseeing img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;}
 
     .gameday { 
         grid-row: 3 / 3;
         grid-column: 4 / 4;
-        border: 5px #010265 solid;
-    }
-
-    .gameday img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
 
     .skiing { 
         grid-row: 4 / 4;
         grid-column: 1 / 1;
-        border: 5px #010265 solid;
-    }
-
-    .skiing img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
 
     .film { 
         grid-row: 4 / 4;
         grid-column: 2 / 2;
-        border: 5px #010265 solid;
-    }
-
-    .film img{
-        height: auto;
-        object-fit: cover;
     }
 
     .flowerhouse { 
         grid-row: 4 / 4;
         grid-column: 3 / 3;
-        border: 5px #010265 solid;
-    }
-
-    .flowerhouse img{ 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
 
     .vangough { 
         grid-row: 4 / 4;
         grid-column: 4 / 4;
-        border: 5px #010265 solid;
-    }
-    
-    .vangough img { 
-        height: 100%;
-        /* height: auto; */
-        object-fit: cover;
     }
  
     footer { 
         grid-column: 1 / span 4;
     }
 
-    }
+    }}
