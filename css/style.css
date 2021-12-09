@@ -36,6 +36,21 @@ header img{
     }
   }
 
+  /* @-webkit-keyframes logo_grow{
+    from {width:30px;}
+    to {width:220px;}
+  }
+  
+  @keyframes logo_grow{
+    from {width:30px;}
+    to {width:220px;}
+  } 
+  
+  #bflogo{
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-name: logo_grow;
+  } */
   /* parallax */
 .parallax {
     /* background-color: #c1e1ec;
@@ -50,14 +65,6 @@ header img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
- 
-  
-  @media only screen and (max-device-width: 1366px) {
-    .parallax {
-      background-attachment: scroll;
-    }
   }
   
 /* 
@@ -1029,10 +1036,7 @@ footer p a img{
         .flip-card:hover .flip-card-inner,
         .flip-card:focus-within .flip-card-inner,
         .flip-card:active .flip-card,
-        .flip-card:focus .flip-card {
-            transform:rotateY(0deg);   
-            transform: none;     
-        }       
+        .flip-card:focus .flip-card 
         .flip-card .flip-card-inner {
             transform: rotateY(0deg);
           }
