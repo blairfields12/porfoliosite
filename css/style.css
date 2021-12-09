@@ -37,29 +37,6 @@ header img{
   }
 
 
-  /* parallax */
-.parallax {
-    /* background-color: #c1e1ec;
-    height: 300px;
-    background-position: center; */
-    background-image: url("../images/hampsunset.jpg");
-
-    /* Set a specific height */
-    min-height: 800px; 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  
-/* 
-  header img{
-    -webkit-transform: scaleY(1.1);
-    transform: scaleY(1.1);
-    z-index: -99;} */
-
 .navigationBar { 
     display: flex; 
     flex-direction: column;
@@ -339,7 +316,6 @@ footer p a img{
 
   .transcript { 
       display: none;
-      /* make it display on tablet and laptop views */
   }
 
   .resume { 
@@ -646,19 +622,36 @@ footer p a img{
         /* justify-content: center; */
     }
 
+     /* parallax */
+    .parallax {
+        /* background-color: #c1e1ec;
+        height: 300px;
+        background-position: center; */
+        background-image: url("../images/hampsunset.jpg");
+
+        /* Set a specific height */
+        min-height: 800px; 
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
      /* CARD FLIP */
-.flip-card {
-    display: block;
-    background-color: transparent;
-    width: 50%;
-    height: 300px;
-    border: 2px solid #fff;
-    perspective: 1000px; 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+    .flip-card {
+        display: block;
+        background-color: transparent;
+        width: 50%;
+        height: 300px;
+        border: 2px solid #fff;
+        perspective: 1000px; 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
   
   .flip-card-inner {
     position: relative;
