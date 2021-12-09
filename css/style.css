@@ -350,8 +350,6 @@ footer p a img{
     .relevantclasses li{ 
         font-weight: lighter;
         font-size: 1em;
-        /* try to figur out how to make class names stay put but if you click it lets you see description or scroll or soemthing --
-        -- if i can do that, make font-weight:bold, but if not, keep light */
         color: #696969;
         justify-self: center;
         justify-content: center;
@@ -368,8 +366,6 @@ footer p a img{
     .moreclasses li{ 
         font-weight: lighter;
         font-size: 1em;
-        /* try to figur out how to make class names stay put but if you click it lets you see description or scroll or soemthing --
-        -- if i can do that, make font-weight:bold, but if not, keep light */
         color: #696969;
         justify-self: center;
         justify-content: center;
@@ -422,7 +418,6 @@ footer p a img{
     }
 
     .flowers img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -436,7 +431,6 @@ footer p a img{
     }
 
     .yummyfood img { 
-        /* height: 100%; */
         height: auto;
     }
 
@@ -449,7 +443,6 @@ footer p a img{
     }
 
     .travelwithfriends img{ 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -463,7 +456,6 @@ footer p a img{
     }
 
     .travel img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -477,7 +469,6 @@ footer p a img{
     }
 
     .baking img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -491,7 +482,6 @@ footer p a img{
     }
 
     .museums img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -505,7 +495,6 @@ footer p a img{
     }
 
     .siteseeing img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;}
 
@@ -518,7 +507,6 @@ footer p a img{
     }
 
     .gameday img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -532,7 +520,6 @@ footer p a img{
     }
 
     .skiing img { 
-        /* height: 100%; */
         height: auto;
         object-fit: cover;
     }
@@ -581,7 +568,6 @@ footer p a img{
     }
 
     /* contact page */
-    /* Add styles to 'container' class */
     .container {
         padding: 10px ;
         margin: 10px;
@@ -594,13 +580,11 @@ footer p a img{
         text-align: center;
     }
 
-    /* Add styles to 'label' selector */
     label {
         font-size: 0.85em;
         margin-left: 10px;
     }
 
-    /* Add styles to 'input' and 'textarea' selectors */
     input[type=text],input[type=email], textarea, input[type=number] {
         width: 100%;
         padding: 12px;
@@ -612,12 +596,10 @@ footer p a img{
         resize: vertical;
     }
 
-    /* Add styles to show 'focus' of selector */
     input[type=text]:focus,input[type=email] input[type=phone]:focus, textarea:focus {
         border: 4px solid #010265 ;
     }
 
-    /* Add styles to the submit button */
     input[type=submit] {
         box-shadow:inset 0px 1px 33px -19px #ffffff;
         background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
@@ -638,45 +620,46 @@ footer p a img{
     input[type=submit]:hover {
         transform: scale(1.3); 
         background-color: #010265;
-        /* color: #b8c6db; */
         border-radius: 24px;
-        /* background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%); */
 
     }
 
-    /* Add styles for 'focus' property */
     input[type=submit]:focus {
         background: #A5D6A7;
         color: whitesmoke;
     }
 
-    /* Style 'hover' property */
-    /* input[type=submit]:hover {
-        background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-        border-radius: 0px;
-    } */
-
-    /* Align items to center of the 'div' with the class 'center' */
     .center {
         text-align: center;
     }
+    .flip-card { 
+        display: none;
+    }
+   
+    /* TABLET VIEW */
+    /* TABLET VIEW */
+  
+  @media screen and (min-width:768px) { 
+    body header {
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
 
-    /* CARD FLIP */
-    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+     /* CARD FLIP */
 .flip-card {
+    display: block;
     background-color: transparent;
-    width: 350px;
-    height: 200px;
+    width: 50%;
+    height: 300px;
     border: 2px solid #fff;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; 
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
-    /* display: flex; */
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -687,12 +670,11 @@ footer p a img{
   }
   
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
   
@@ -702,11 +684,9 @@ footer p a img{
   .flip-card-front h1 { 
       text-align: center;
       color: #010265;
-      /* padding-top: 150px; */
-
+      padding-top: 100px;
   }
   
-  /* Style the back side */
   .flip-card-back {
     background-color: #b8c6db;
     color: white;
@@ -714,17 +694,18 @@ footer p a img{
   }
 
   .flip-card-back h1 { 
-      /* padding-top: 75px; */
       color: #010265;
-      font-size: 20px;
+      font-size: 50px;
+      padding-top: 65px;
       font-weight: bolder;
       text-transform: uppercase;
   }
 
+
   .flip-card-back p { 
     color: #010265;
     line-height: 0px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
     .flip-card:hover .flip-card-inner,
@@ -735,46 +716,11 @@ footer p a img{
     a.flip-card:focus .flip-card-inner {
         transform:rotateY(180deg);   
         }       
-    /* TABLET VIEW */
-    /* TABLET VIEW */
-  
-  @media screen and (min-width:768px) { 
-    body header {
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center; */
-    }
-  
-    .flip-card {
-        background-color: transparent;
-        width: 50%;
-        height: 400px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-
-    .flip-card-front h1 { 
-        padding-top: 150px;
-  
-    }
-  
-    .flip-card-back h1 { 
-        font-size: 50px;
-        padding-top: 75px
-    }
-  
-    .flip-card-back p { 
-      line-height: 0px;
-      font-size: 20px;
-    }
 
     .mainpagegrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto ;
-        /* grid-template-rows: 100px auto; */
-        /* align-content: center; */
         padding-bottom: 0px;
         margin-bottom: 0px;
         padding-right: 20px;
@@ -784,7 +730,6 @@ footer p a img{
     .headshot{ 
         grid-column: 2 / -1;
         grid-row: 1 / 1;
-        /* padding-bottom: 500px; */
         margin-top: -100px;
     }
 
@@ -794,9 +739,7 @@ footer p a img{
 
     .infoaboutme { 
         display: flex;
-        /* flex-wrap: nowrap; */
         flex-direction: column;
-        /* align-content: stretch; */
         grid-column: 1 / 2;
         grid-row: 1/1;
         height: 100%;
@@ -818,17 +761,12 @@ footer p a img{
         /* display: grid; */
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 100px 1fr 1fr 1fr 1fr;
-        /* grid-column-gap: 1em;
-        grid-row-gap: 1em;  */
     }
 
     #h2 {  
-        /* color: #0000cd; */
-        /* color: #696969; */
         margin-left: 20px;
         font-size: 1.5em;
         color: #696969;;
-        /* padding-top: 10px; */
         padding-bottom: 10px;
         /* margin: auto; */
         grid-column: 1 / span 3;
@@ -983,27 +921,11 @@ footer p a img{
             flex-wrap: nowrap;
         }
 
-    /* .relevantclasses { 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .moreclasses { 
-        flex-direction: column;
-        flex-wrap: wrap;
-    } */
-
-
     /* Main/Portfolio Intro Page */
 
         h2 { 
             grid-column: 1 / span 2;
         }
-        /* .headshot { 
-            grid-column: 1 / 1;
-            grid-row: 2 / 2;
-        }  */
 
         .photos{
             display: flex;
@@ -1014,62 +936,7 @@ footer p a img{
             min-width: 250px;
             min-height: 250px; 
         }
-    
-    /* turn off animation */
-    @media (prefers-reduced-motion:reduce){
-        .navigationBar{
-          animation: none;
-        }
-
-        /*Turn off parallax*/
-        .parallax{
-            display: none;
-            /* background: none;
-            height: initial;
-            background-position: initial; */
-        }
-
-        .flip-card:hover .flip-card-inner,
-        .flip-card:focus-within .flip-card-inner,
-        .flip-card:active .flip-card,
-        .flip-card:focus .flip-card 
-        .flip-card .flip-card-inner {
-            transform: rotateY(0deg);
-          }
-        }
-      
-    
-
-    /* p { 
-        grid-column: 2 / 2;
-        grid-row: 3/ 3 ;
-    } */
-
-
-
-    /* div.headshot {
-        max-width: 800px;
-        max-height: 800px;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        display: inline-block;
     }
-
-    .headshot img { 
-        height: 300px;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin: 0px;
-        align-items: center;
-        align-content: center;
-        display: inline-block;
-        /* position: absolute; */
-        /* position: relative;
-        left: 15px;
-    } */ 
-
 /* DESKTOP VIEW */
 /* DESKTOP VIEW */
 @media screen and (min-width:962px) { 
@@ -1082,7 +949,6 @@ footer p a img{
 
     body header {
         align-items: center;
-        /* justify-content: center; */
     }
 
     .navigationBar { 
@@ -1091,6 +957,10 @@ footer p a img{
 
     .flip-card {
         width: 75%;
+    }
+
+    .flip-card-front h1 { 
+        font-weight: bold;
     }
 
     .classes { 
@@ -1198,6 +1068,31 @@ footer p a img{
         grid-row: 1/3;
     }
 
+}
+
+   /* turn off animation */
+   @media (prefers-reduced-motion:reduce){
+    .navigationBar{
+      animation: none;
     }
 
-}
+    /*Turn off parallax*/
+    .parallax{
+        display: none;
+    }
+
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus-within .flip-card-inner,
+    .flip-card:active .flip-card,
+    .flip-card:focus .flip-card 
+    .flip-card .flip-card-inner {
+        transform: rotateY(0deg);
+      }
+
+    input[type=submit]:hover {
+        transform: none;
+        border-radius: 4px;
+
+    }
+  
+
