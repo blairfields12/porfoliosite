@@ -36,21 +36,7 @@ header img{
     }
   }
 
-  /* @-webkit-keyframes logo_grow{
-    from {width:30px;}
-    to {width:220px;}
-  }
-  
-  @keyframes logo_grow{
-    from {width:30px;}
-    to {width:220px;}
-  } 
-  
-  #bflogo{
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-name: logo_grow;
-  } */
+
   /* parallax */
 .parallax {
     /* background-color: #c1e1ec;
@@ -66,6 +52,7 @@ header img{
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   
 /* 
   header img{
@@ -636,7 +623,7 @@ footer p a img{
         background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
         border:2px solid #483d8b;
         display:inline-block;
-        border-radius:18px;
+        border-radius:4px;
         cursor:pointer;
         color:#666666;
         font-family: 'Encode Sans', sans-serif;
@@ -648,6 +635,14 @@ footer p a img{
         text-shadow:-1px -1px 29px #ffffff;
         margin-bottom: 5px;
     }
+    input[type=submit]:hover {
+        transform: scale(1.3); 
+        background-color: #010265;
+        /* color: #b8c6db; */
+        border-radius: 24px;
+        /* background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%); */
+
+    }
 
     /* Add styles for 'focus' property */
     input[type=submit]:focus {
@@ -656,12 +651,10 @@ footer p a img{
     }
 
     /* Style 'hover' property */
-    input[type=submit]:hover {
-        /* background: #2196F3; */
+    /* input[type=submit]:hover {
         background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-        background-color:#e9e9e9;
         border-radius: 0px;
-    }
+    } */
 
     /* Align items to center of the 'div' with the class 'center' */
     .center {
@@ -672,15 +665,14 @@ footer p a img{
     /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
-    /* width: 500px; */
-    width: 100%;
-    height: 400px;
+    width: 350px;
+    height: 200px;
     border: 2px solid #fff;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     /* display: flex; */
   }
   
@@ -694,20 +686,6 @@ footer p a img{
     transform-style: preserve-3d;
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  /* .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .flip-card:focus .flip-card {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card:active .flip-card {
-    transform: rotateY(180deg);
-  } */
-
-  
-
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -724,7 +702,7 @@ footer p a img{
   .flip-card-front h1 { 
       text-align: center;
       color: #010265;
-      padding-top: 150px;
+      /* padding-top: 150px; */
 
   }
   
@@ -736,21 +714,19 @@ footer p a img{
   }
 
   .flip-card-back h1 { 
-      padding-top: 75px;
+      /* padding-top: 75px; */
       color: #010265;
+      font-size: 20px;
+      font-weight: bolder;
+      text-transform: uppercase;
   }
 
   .flip-card-back p { 
     color: #010265;
     line-height: 0px;
+    font-size: 15px;
   }
 
-/* .flip-card:hover .flip-card-inner,
-.flip-card:focus-within .flip-card,
-.flip-card:active .flip-card,
-.flip-card:focus .flip-card {
-  transform: rotateY(180deg);
-} */
     .flip-card:hover .flip-card-inner,
     .flip-card:focus-within .flip-card-inner,
     .flip-card:active .flip-card-inner,
@@ -768,15 +744,30 @@ footer p a img{
         align-items: center;
         /* justify-content: center; */
     }
-    /* .headshot img { 
-        position:absolute;
-        margin-right: 200px;
+  
+    .flip-card {
+        background-color: transparent;
+        width: 50%;
+        height: 400px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    
 
-    .aboutme { 
-        margin-right: 300px;
-    } */
+
+    .flip-card-front h1 { 
+        padding-top: 150px;
+  
+    }
+  
+    .flip-card-back h1 { 
+        font-size: 50px;
+        padding-top: 75px
+    }
+  
+    .flip-card-back p { 
+      line-height: 0px;
+      font-size: 20px;
+    }
 
     .mainpagegrid {
         display: grid;
@@ -789,11 +780,16 @@ footer p a img{
         padding-right: 20px;
     }
 
+    
     .headshot{ 
         grid-column: 2 / -1;
         grid-row: 1 / 1;
         /* padding-bottom: 500px; */
         margin-top: -100px;
+    }
+
+    .reachout { 
+        grid-column: 1/3;
     }
 
     .infoaboutme { 
@@ -1093,12 +1089,9 @@ footer p a img{
         flex-direction: row;
     }
 
-    /* .explanation { 
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: 100px;
-    } */
+    .flip-card {
+        width: 75%;
+    }
 
     .classes { 
         justify-content: center;
@@ -1194,4 +1187,17 @@ footer p a img{
         grid-column: 1 / span 4;
     }
 
-    }}
+
+    .reachout { 
+        grid-column: 2/-1;
+        grid-row: 2/3;
+    }
+
+    .infoaboutme { 
+        grid-column: 1 / 2;
+        grid-row: 1/3;
+    }
+
+    }
+
+}
