@@ -8,14 +8,14 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Encode+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ07ZK4LC9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ07ZK4LC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-SZ07ZK4LC9');
-</script>
+    gtag('config', 'G-SZ07ZK4LC9');
+  </script>
 	<title>Blair's Portfolio</title> <!-- title of tab on browser -- only thing you can see  -->
 </head>
 
@@ -44,15 +44,21 @@
 
     <div class="container">
         <p>Fill out your information!</p>
-        <form action="#" name="contact_form" method="POST">
-            <label for="firstname">First Name</label>
+          <form
+            action="https://formspree.io/f/mvolpypg"
+            method="POST"
+          >
+            <!-- <label for="firstname">First Name</label>
             <input name="firstname" type="text" id="firstname" required placeholder="John"/>
             <br>
             <label for="lastname">Last Name</label>
             <input name="lastname" type="text" id="lastname" required placeholder="Doe"/>
+            <br> -->
+            <label for="fullname">Full Name</label>
+            <input name="fullname" type="text" id="fullname" required placeholder="John Doe"/>
             <br>
             <label for="email">Email</label>
-            <input name="email" type="email" id="email" name="email" required placeholder="you@domain.com"/>
+            <input name="email" type="email" id="email" name="email" required placeholder="johndoe@gmail.com"/>
             <br>
             <label for="number">Phone Number</label><br>
             <input name="number" type="number" id="number" required placeholder="(012) 345-6789"/>
@@ -66,21 +72,7 @@
         </form>	
     </div>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-              <h1>My contact information!</h1>
-            <!-- <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;"> -->
-          </div>
-          <div class="flip-card-back">
-            <h1>Blair Fields</h1>
-            <p>school email: fieldsb@umich.edu</p>
-            <p>personal email: blairfieldss@gmail.com</p>
-            <p>number: (248) 762-2035</p>
-          </div>
-        </div>
-      </div>
-
+   
 
 </main>
 
@@ -88,9 +80,9 @@
 
 <footer>
     <p>Blair Fields &copy; 2021 <br>
-        <a href="https://www.linkedin.com/in/blair-fields" aria-label = "linkedin"><img src="images/linkedinIcon.png" alt="linkedin"</a>
-        <a href="mailto: fieldsb@umich.edu" aria-label = "gmail"><img src="images/gmailIcon.png" alt="gmail"</a>
-        <a href="https://github.com/blairfields12" aria-label = "github"><img src="images/GitHub-logo.png" alt="github"></a> 
+        <a class=linkedin href="https://www.linkedin.com/in/blair-fields" aria-label = "linkedin"><img src="images/linkedinIcon.png" alt="linkedin"</a>
+        <a class=michmail href="mailto: fieldsb@umich.edu" aria-label = "gmail"><img src="images/gmailIcon.png" alt="gmail"</a>
+        <a class=github href="https://github.com/blairfields12" aria-label = "github"><img src="images/GitHub-logo.png" alt="github"></a> 
     </p> <!-- copyright -->
 </footer>
 </body>
